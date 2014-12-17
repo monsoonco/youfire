@@ -18,7 +18,9 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-
+  ENV.contentSecurityPolicy = {
+    'connect-src': "*", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
+  }
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     ENV.APP.LOG_ACTIVE_GENERATION = true;
