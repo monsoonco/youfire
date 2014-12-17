@@ -1,7 +1,8 @@
-{{#each video in model}}
-  {{ember-youtube video=video.youtubeId}}
-{{/each}}
+{{ember-youtube video=cursor.youtubeVideo.youtubeId}}
 
-<button {{action 'addVideo'}}>
-  Add a random video url
+
+{{input type=text value=videoId}}
+
+<button {{action 'addVideo' videoId}}>
+  Add video id
 </button>
